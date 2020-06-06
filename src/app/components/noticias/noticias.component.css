@@ -1,0 +1,28 @@
+.container{
+    background-color:azure;
+}
+aside img {
+    width: 600px; height: 700px;
+    margin-top: 58px;
+}
+
+.card-text{
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+.card-title{
+    font-size: 15px;
+    margin-bottom: 1px;
+}
+.nav-link{
+    font-weight: bolder;
+}
+.cabecera{
+    font-size: 30px;
+}
+.imagenDiv{
+    width: 3em;
+}
+.imagenIcon{
+    width: 1em;
+}

@@ -1,0 +1,77 @@
+<section>
+    <div class="row">
+      <div class="col-md-8 col-sm-12 ">
+        <h2 class="text-lg-center bg-danger text-white">Coversor de divisas</h2>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"><img class="imagenDiv" src="assets/images/usd.png" alt=""><br>USD</th>
+                <th scope="col"><img class="imagenDiv" src="assets/images/arg.png" alt=""><br>ARG</th>
+                <th scope="col"><img class="imagenDiv" src="assets/images/jpon.jpg" alt=""><br>JPY</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><img class="imagenDiv" src="assets/images/usd.png" alt=""></th>
+                <th scope="row">1   USD<br>Inverse</th>
+                <td>{{resultados[0]}}<br>{{resultados[0]}}</td>
+                <td>{{resultados[1]}}<br>{{resultados[3]}}</td>
+                <td>{{resultados[2]}}<br>{{resultados[6]}}</td>
+              </tr>
+              <tr>
+                <th scope="row"><img class="imagenDiv" src="assets/images/arg.png" alt=""></th>
+                <th scope="row">1   ARG<br>Inverse</th>
+                <td>{{resultados[3]}}<br>{{resultados[1]}}</td>
+                <td>{{resultados[4]}}<br>{{resultados[4]}}</td>
+                <td>{{resultados[5]}}<br>{{resultados[7]}}</td>
+              </tr>
+              <tr>
+                <th scope="row"><img class="imagenDiv" src="assets/images/jpon.jpg" alt=""></th>
+                <th scope="row">1   JPY<br>Inverse</th>
+                <td>{{resultados[6]}}<br>{{resultados[2]}}</td>
+                <td>{{resultados[7]}}<br>{{resultados[5]}}</td>
+                <td>{{resultados[8]}}<br>{{resultados[8]}}</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+        <div class=" conversorDiv col-md-4 text-white">
+            <h5 class="text-white conversor">Coversor De Divisas</h5>
+            <form>
+                <fieldset>
+                  <div class="form-group">
+                    <label for="cantidad">Cantidad</label>
+                    <input type="number" id="cantidad" name="cantidad" class="form-control" placeholder="Cantidad" [(ngModel)]="cantidad">
+                  </div>
+                  <div class="form-group">
+                    <label for="de">De</label>
+                    <select id="de" name="de" class="form-control" [(ngModel)]="de">
+                      <option value="USD">USD Dólares EEUU</option>
+                      <option value="ARS">ARS Pesos Argentinos</option>
+                      <option value="JPY">JPY Yenes Japoneses</option>
+                      <option value="EUR">EUR Euros</option>
+                      <option value="AUD">AUD Dolares Australianos</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="a">A</label>
+                    <select id="a" name="a" class="form-control" [(ngModel)]="a">
+                      <option value="ARS">ARS Pesos Argentinos</option>
+                      <option value="USD">USD Dólares EEUU</option>
+                      <option value="JPY">JPY Yenes Japoneses</option>
+                      <option value="EUR">EUR Euros</option>
+                      <option value="AUD">AUD Dolares Australianos</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" id="textInput" class="form-control" value="{{divisa.resultado}}">
+                  </div>
+                  <button type="submit" class="btn btn-warning text-white" (click)="obtenerDivisa()">Convertir <i class="fas fa-arrow-right text-white"></i></button>
+                </fieldset>
+              </form>
+      </div>
+  </div>
+</section>

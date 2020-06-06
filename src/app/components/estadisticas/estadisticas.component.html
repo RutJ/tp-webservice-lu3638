@@ -1,0 +1,73 @@
+<form>
+    <div class="form-group" >
+        <label class="my-1 mr-2" for="pais">Pais: </label>
+        <select class="custom-select col-2 my-1 mr-sm-2" id="pais" name="pais" [(ngModel)]="pais" (change)="obtenerEstadisticasPais()">
+            <option selected>Seleccione...</option>
+            <option> Argentina</option>
+            <option> Chile</option>
+            <option> Brasil</option>
+            <option> Paraguay</option>
+            <option> Uruguay</option>
+        </select>
+    
+        <div class="form-group row">
+            <div class="col-sm-2">Casos confirmados:</div>
+            <div class="col-sm-10" *ngIf="mostrar">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck1" (change)="ocultar1($event)">
+                <label class="form-check-label" for="gridCheck1" *ngIf="confirmados">
+                  {{estadistica.casosConfirmados}}
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="col-sm-2">Curados:</div>
+            <div class="col-sm-10" *ngIf="mostrar">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck2" (change)="ocultar2($event)">
+                <label class="form-check-label" for="gridCheck2" *ngIf="recuperados">
+                    {{estadistica.curados}}
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="col-sm-2">Fallecidos: </div>
+            <div class="col-sm-10" *ngIf="mostrar">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck3" (change)="ocultar3($event)">
+                <label class="form-check-label" for="gridCheck3" *ngIf="fallecidos">
+                  {{estadistica.fallecidos}}
+                </label>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-group row">
+            <div class="col-sm-10">
+              <button type="submit" class="btn btn-danger"  (click)="guardarEstadistica()">Enviar </button>
+            </div>
+          </div>
+    </div>
+</form>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Ubicacion</th>
+        <th scope="col">Casos confirmados</th>
+        <th scope="col">Curados</th>
+        <th scope="col">Fallecidos</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of estadisticas">
+        <th scope="row">{{item.pais}}</th>
+        <td>{{item.casosConfirmados}}</td>
+        <td>{{item.curados}}</td>
+        <td>{{item.fallecidos}}</td>
+      </tr>
+    </tbody>
+  </table>

@@ -20,18 +20,15 @@ export class HoroscopoService {
     return this._http.get("https://zodiac-sign.p.rapidapi.com/signs",httpOptions);
   }
 
-  public obtenerDia(fecha:string):Observable<any>{
+  public obtenerDia():Observable<any>{
     //peticion por get a esa url de un api rest
     const httpOptions ={
       headers: new HttpHeaders({
-        'X-RapidAPI-Host':'zodiac-sign.p.rapidapi.com',
+        'X-RapidAPI-Host':'horoscope5.p.rapidapi.com',
         'X-RapidApi-Key':'d458f7de41mshac2328bb432c49ap18ac2djsn10a0cd04240b',
-      }),
-      params:{
-        'date': fecha
-      }
+      })
     };
-    return this._http.get("https://zodiac-sign.p.rapidapi.com/sign"+fecha,httpOptions);
+    return this._http.get("https://horoscope5.p.rapidapi.com/general/daily",httpOptions);
   }
 }
 

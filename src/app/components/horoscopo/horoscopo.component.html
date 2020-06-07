@@ -4,7 +4,7 @@
         <div class="col-md-4 col-sm-6 col-6" *ngFor="let item of horoscopos" >
             <div class="row mb-4" >
                 <div class="col-4 ">
-                    <img class="imagHoroscopo" width="50" height="50" src="assets/images/aries.png" alt="...">
+                    <img class="imagHoroscopo" width="50" height="50" src="{{item.img}}" alt="...">
                 </div>
                 <div class="col-8 mt-3">
                     <h5 class="titulo bg-danger text-white text-lg-center">{{item.name}}</h5>
@@ -13,9 +13,10 @@
         </div>
         
     </div>
+    
 
     <div class="col-md-12">
-        <h2 class="tituloSec2 bg-danger pl-5 text-white" >{{nombre.name}} - dia</h2>  
+        <h2 class="tituloSec2 bg-danger pl-5 text-white" >{{datosDia["name"]}} - dia</h2>  
         <div class="row">
             
             <div class="col-md-8">
@@ -23,8 +24,8 @@
                     <h3 class="tituloSec2 text-primary pl-5" >Aries</h3>   
                 </div>
                 <div >
-                    <p class="pl-5 pr-5">Deberás tomar complicadas decisiones en lo que concierne a la pareja en la jornada de hoy.
-                        Busca en ti la aceptación. Con tus sentimientos a flor de piel, sentirás que tu pareja no te ama lo suficiente. Busca hablar de esto con ella.</p>
+                    <p class="pl-5 pr-5 text-danger">Profesor para la descripcion, en la consola del navegador se puede observar que me devuelve un string vacio,
+                         ya que la api tiene un texto de descripcion por dia pero no lo puedo obtener y no pude encontrar otra api gratis que haga lo planteado </p>
                 </div>
             </div>
             <div class="col-md-4 pl-5">

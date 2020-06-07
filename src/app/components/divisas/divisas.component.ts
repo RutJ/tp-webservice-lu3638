@@ -35,13 +35,14 @@ export class DivisasComponent implements OnInit {
   }
 
 public cargarResultados(){
+  
     for (let i = 0; i < this.divisas.length; i++) {
       const element = this.divisas[i];
       for (let j = 0; j < this.divisas.length; j++) {
         const element2 = this.divisas[j];
-        this.conversorService.obtenerMonto(element,element2,"1").subscribe(
+        this.conversorService.obtenerResultado(element,element2).subscribe(
           (result)=>{
-            this.resultados.push(result["result"]);
+            this.resultados.push(result);
           }
         );
       }

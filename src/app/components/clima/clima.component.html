@@ -1,0 +1,55 @@
+<div class="container row">
+
+    <h1 class="tituloSec2 pl-5 text-center col-12">Informacion del Clima </h1>
+    <div class="table-responsive col-8 row">
+        <table class="table table-striped">
+            <thead>
+              <tr class="bg-danger text-white">
+                <th scope="col ">Seleccione ciudad:</th>
+                <th scope="col "><form action=""><select class="custom-select" id="idCiudad" name="idCiudad" [(ngModel)]="ciudad" (change)="obtenerClima()">
+                    <option selected>Seleccione...</option>
+                    <option>Buenos Aires</option>
+                    <option>Cordoba</option>
+                    <option>London</option>
+                    <option>New York</option>
+                    <option>Tokio</option>
+                </select></form></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Termperatura: </th>
+                <td>{{clima.temp}} °C</td>
+              </tr>
+              <tr>
+                <th scope="row">Sensacion termica:</th>
+                <td>{{clima.feels_like}}  °C.</td>
+              </tr>
+              <tr>
+                <th scope="row">Temperatura Minima:</th>
+                <td>{{clima.temp_min}}  °C.</td>
+              </tr>
+              <tr>
+                <th scope="row">Termperatura Maxima:</th>
+                <td>{{clima.temp_max}} °C.</td>
+              </tr>
+              <tr>
+                <th scope="row">Presion:</th>
+                <td>{{clima.pressure}} mb.</td>
+              </tr>
+              <tr>
+                <th scope="row">Humedad:</th>
+                <td>{{clima.humidity}} %.</td>
+              </tr>
+              <tr>
+                <th scope="row">Viento:</th>
+                <td>a {{clima.speed}} km/h. </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    <div class="col-4 row">
+        <img width="300" height="400" src="assets/images/clima.jpeg" alt="">
+
+    </div>
+</div>

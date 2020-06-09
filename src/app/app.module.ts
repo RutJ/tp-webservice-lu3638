@@ -11,6 +11,7 @@ import { NoticiasComponent } from './components/noticias/noticias.component';
 import { DivisasComponent } from './components/divisas/divisas.component';
 import { EstadisticasComponent } from './components/estadisticas/estadisticas.component';
 import { HttpClientModule }from '@angular/common/http';
+import { ClimaComponent } from './components/clima/clima.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { HttpClientModule }from '@angular/common/http';
     HoroscopoComponent,
     NoticiasComponent,
     DivisasComponent,
-    EstadisticasComponent
+    EstadisticasComponent,
+    ClimaComponent
   ],
   imports: [
     BrowserModule,

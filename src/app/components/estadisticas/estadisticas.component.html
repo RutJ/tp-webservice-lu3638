@@ -1,5 +1,5 @@
 <form>
-    <div class="form-group" >
+    <div class="form-group">
         <label class="my-1 mr-2" for="pais">Pais: </label>
         <select class="custom-select col-2 my-1 mr-sm-2" id="pais" name="pais" [(ngModel)]="pais" (change)="obtenerEstadisticasPais()">
             <option selected>Seleccione...</option>
@@ -48,12 +48,13 @@
           
           <div class="form-group row">
             <div class="col-sm-10">
-              <button type="submit" class="btn btn-danger"  (click)="guardarEstadistica()">Enviar </button>
+              <button type="submit" class="btn btn-danger" (click)="guardarEstadistica()">Enviar </button>
             </div>
           </div>
     </div>
 </form>
-<table class="table">
+<div class="table-responsive">
+  <table class="table">
     <thead>
       <tr>
         <th scope="col">Ubicacion</th>
@@ -71,3 +72,5 @@
       </tr>
     </tbody>
   </table>
+
+</div>
